@@ -43,7 +43,9 @@
     }
   },
   "require": {
-    "ext-openssl": "*"
+    "ext-openssl": "*",
+    "ext-curl": "*",
+    "maatify/logger": "^1.1"
   },
   "autoload": {
     "psr-4": {
