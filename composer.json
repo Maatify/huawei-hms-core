@@ -1,7 +1,7 @@
 {
-  "name": "maatify/hms-core",
+  "name": "maatify/huawei-hms-core",
   "description": "maatify.dev HMS Core handler, known by our team",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "library",
   "keywords": [
     "PHP",
