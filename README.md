@@ -1,11 +1,11 @@
-[![Current version](https://img.shields.io/packagist/v/maatify/admin-portal-handler)][pkg]
-[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/maatify/admin-portal-handler)][pkg]
-[![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/admin-portal-handler)][pkg-stats]
-[![Total Downloads](https://img.shields.io/packagist/dt/maatify/admin-portal-handler)][pkg-stats]
-[![Stars](https://img.shields.io/packagist/stars/maatify/admin-portal-handler)](https://github.com/maatify/admin-portal-handler/stargazers)
+[![Current version](https://img.shields.io/packagist/v/maatify/huawei-hms-core)][pkg]
+[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/maatify/huawei-hms-core)][pkg]
+[![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/huawei-hms-core)][pkg-stats]
+[![Total Downloads](https://img.shields.io/packagist/dt/maatify/huawei-hms-core)][pkg-stats]
+[![Stars](https://img.shields.io/packagist/stars/maatify/huawei-hms-core)](https://github.com/maatify/huawei-hms-core/stargazers)
 
-[pkg]: <https://packagist.org/packages/maatify/admin-portal-handler>
-[pkg-stats]: <https://packagist.org/packages/maatify/admin-portal-handler/stats>
+[pkg]: <https://packagist.org/packages/maatify/huawei-hms-core>
+[pkg-stats]: <https://packagist.org/packages/maatify/huawei-hms-core/stats>
 
 # PostValidatorJsonCode
 
@@ -15,24 +15,37 @@ maatify.dev Admin Portal Handler, known by our team
 # Installation
 
 ```shell
-composer require maatify/admin-portal-handler
+composer require maatify/huawei-hms-core
 ```
     
 ## Important
-Don't forget to use \App\DB\DBS\DbConnector;
+```php
+<?php
 
-Don't forget to use \App\DB\DBS\DbLogger;
+use Maatify\HMS\HMSCoreRequest;
 
-Don't forget to use \App\DB\DBS\DbPortalHandler;
+/**
+ * Created by Maatify.dev
+ * User: Maatify.dev
+ * Date: 2024-04-29
+ * Time: 11:19 AM
+ * https://www.Maatify.dev
+ */
+class HMSConnector extends HMSCoreRequest
+{
+    protected string $APP_ID_FROM_CONSOLE = __APP_ID_FROM_CONSOLE__;
 
-Don't forget to use \App\DB\DBS\DbProjectHandler;
+    protected string|int $client_id = __client_id__;
 
-Don't forget to use \App\Assist\AppFunctions
+    protected string $client_credentials = __client_credentials__;
 
-Don't forget to use \App\Assist\Encryptions
+    public function CallHMSByToken(string $title, string $message, string $token)
+    {
+        return $this
+            ->SetTitle($title)
+            ->SetMessage($message)
+            ->SetTokens([$token])
+            ->Load();
+    }
 
-Don't forget to use \App\Assist\Jwt
-
-Don't forget to use \App\Assist\OpensslEncryption
-
-Don't forget to use \App\DB\Tables\Language\LanguagePortalRecord
+}
