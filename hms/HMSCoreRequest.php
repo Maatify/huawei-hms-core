@@ -178,7 +178,7 @@ abstract class HMSCoreRequest
                 $this->curl_method,
                 $url,
                 $this->params,
-                __METHOD__], 'Debug_' . __FUNCTION__);
+                __METHOD__], 'Debug_HMS_' . __FUNCTION__);
 
             //            }
 
@@ -239,7 +239,7 @@ abstract class HMSCoreRequest
             $this->curl_method,
             $url,
             $params,
-            __METHOD__], 'Debug_' . __FUNCTION__);
+            __METHOD__], 'Debug_HMS_' . __FUNCTION__);
         return $response;
     }
 
