@@ -7,9 +7,9 @@
 [pkg]: <https://packagist.org/packages/maatify/huawei-hms-core>
 [pkg-stats]: <https://packagist.org/packages/maatify/huawei-hms-core/stats>
 
-# PostValidatorJsonCode
+# HuaweiHmsCore
 
-maatify.dev Admin Portal Handler, known by our team
+maatify.dev HuaweiHmsCore Handler, known by our team
 
 
 # Installation
