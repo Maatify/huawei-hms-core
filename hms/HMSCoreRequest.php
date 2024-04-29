@@ -85,7 +85,7 @@ abstract class HMSCoreRequest
     public function Load()
     {
         $this->params = [
-            'validate_only' => true,
+            'validate_only' => false,
             'message'       => [
                 'data' => json_encode([
                     'title_data' => 'data title_: ' . $this->title,
