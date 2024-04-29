@@ -88,8 +88,8 @@ abstract class HMSCoreRequest
             'validate_only' => false,
             'message'       => [
                 'data' => json_encode([
-                    'title_data' => 'data title_: ' . $this->title,
-                    'body_data'  => 'data body_ : ' . $this->message,
+                    'title_data' => $this->title,
+                    'body_data'  => $this->message,
                 ], true),
 
                 'android' => [
