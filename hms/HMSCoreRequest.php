@@ -160,7 +160,7 @@ abstract class HMSCoreRequest
             curl_close($ch);
             if ($curl_errno > 0) {
                 $response['success'] = false;
-                $response['error'] = "(err-Fawry) cURL Error ($curl_errno): $curl_error";
+                $response['error'] = "(err-HMS) cURL Error ($curl_errno): $curl_error";
             } else {
                 if ($resultArray = json_decode($result, true)) {
                     $response = $resultArray;
@@ -220,7 +220,7 @@ abstract class HMSCoreRequest
         curl_close($ch);
         if ($curl_errno > 0) {
             $response['success'] = false;
-            $response['error'] = "(err-Fawry) cURL Error ($curl_errno): $curl_error";
+            $response['error'] = "(err-HMS) cURL Error ($curl_errno): $curl_error";
         } else {
             if ($resultArray = json_decode($result, true)) {
                 $response = $resultArray;
